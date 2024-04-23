@@ -37,6 +37,16 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+
+    java {
+      toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+    }
+
+    kotlin {
+      jvmToolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+      }
+    }
 }
 
 dependencies {
